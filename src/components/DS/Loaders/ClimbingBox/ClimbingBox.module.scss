@@ -1,0 +1,37 @@
+.container {
+  display: inherit;
+  height: 7.1em;
+  position: relative;
+  width: 7.1em;
+}
+
+.wrapper {
+  height: 5.4em;
+  left: 50%;
+  margin-left: -2.7em;
+  margin-top: -2.7em;
+  position: absolute;
+  top: 50%;
+  width: 5.4em;
+};
+
+.box {
+  animation-fill-mode: both;
+  bottom: -0.1em;
+  background-color: transparent;
+  border-radius: 15%;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  transform: translate(0 -1em) rotate(-45deg);
+  width: 1em;
+};
+
+.hill {
+  height: 7.1em;
+  left: 1.7em;
+  position: absolute;
+  top: 1.7em;
+  transform: rotate(45deg);
+  width: 7.1em;
+};

@@ -1,0 +1,111 @@
+@use '../../../assets/styles/variables' as vars;
+@use 'sass:color';
+
+.btn {
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+
+  .inner {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.primary {
+  background-color: vars.$primary-color;
+
+  &:hover {
+    background-color: color.adjust(
+      vars.$primary-color,
+      $blackness: vars.$darken-value
+    );
+  }
+}
+
+.secondary {
+  background-color: vars.$secondary-color;
+  border: 1px solid vars.$border-color;
+  color: #333;
+
+  &:hover {
+    background-color: color.adjust(
+      vars.$secondary-color,
+      $blackness: vars.$darken-value
+    );
+  }
+}
+
+.success {
+  background-color: vars.$success-color;
+
+  &:hover {
+    background-color: color.adjust(
+      vars.$success-color,
+      $blackness: vars.$darken-value
+    );
+  }
+}
+
+.danger {
+  background-color: vars.$danger-color;
+
+  &:hover {
+    background-color: color.adjust(
+      vars.$danger-color,
+      $blackness: vars.$darken-value
+    );
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  color: vars.$text-color;
+
+  &:hover {
+    background-color: color.adjust(
+      vars.$secondary-color,
+      $blackness: vars.$darken-value
+    );
+  }
+}
+
+.link {
+  background-color: transparent;
+  color: vars.$primary-color;
+  padding: 0;
+
+  &:hover {
+    color: color.adjust(
+      vars.$primary-color,
+      $blackness: vars.$darken-value * 1.5
+    );
+    text-decoration: underline;
+  }
+}
+
+
+.primary,
+.secondary,
+.success,
+.danger,
+.ghost,
+.link {
+  &:disabled {
+    color: color.adjust(
+      vars.$disabled-color,
+      $lightness: vars.$lighten-value
+    );
+    background-color: vars.$disabled-color;
+    cursor: not-allowed;
+  }
+}

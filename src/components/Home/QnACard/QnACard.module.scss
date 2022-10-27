@@ -1,0 +1,95 @@
+@use '../../../assets/styles/variables' as vars;
+@use 'sass:color';
+
+.main {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 225px;
+}
+
+.inner {
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  position: absolute;
+  right: 1rem;
+
+  .edit {
+    color: vars.$success-color;
+
+    &:hover {
+      color: color.adjust(
+        vars.$success-color,
+        $blackness: vars.$darken-value * 1.5
+      );
+    }
+  }
+
+  .delete {
+    color: vars.$danger-color;
+
+    &:hover {
+      color: color.adjust(
+        vars.$danger-color,
+        $blackness: vars.$darken-value * 1.5
+      );
+    }
+  }
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+
+  .text {
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.5em;
+    }
+
+    .overflow {
+      height: 140px;
+      overflow-y: auto;
+      margin-bottom: 1em;
+
+      p {
+        line-height: 1.5;
+        white-space: pre-wrap;
+        padding-right: 0.7rem;
+      }
+    }
+  }
+}
+
+.front, .back {
+  border: 1px solid #e9e9e9;
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: vars.$border-radius;
+  box-shadow: vars.$standard-shadow;
+  position: absolute;
+  width: 100%;
+}
+
+.back {
+  background-color: color.adjust(
+    vars.$success-color,
+    $lightness: vars.$lighten-value * 2.5
+  );
+  transform: rotateY(180deg);
+}

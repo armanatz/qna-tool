@@ -1,0 +1,61 @@
+@use '../../assets/styles/media_queries' as mediaQ;
+
+.heading {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 3em;
+
+  @include mediaQ.mobile-landscape-and-down {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include mediaQ.mobile-landscape-and-down {
+      justify-content: center;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.empty {
+  height: calc(100vh - 405px);
+
+  @include mediaQ.pc-and-up {
+    height: calc(100vh - 305px);
+  }
+}
+
+.grid-container {
+  width: 100%;
+
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+    @include mediaQ.tablet {
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    }
+
+    @include mediaQ.tablet-landscape {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    @include mediaQ.pc-and-up {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+  }
+}

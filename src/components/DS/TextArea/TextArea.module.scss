@@ -1,0 +1,15 @@
+@use '../../../assets/styles/variables' as vars;
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: vars.$border-radius;
+  font-family: vars.$font-family;
+  font-size: vars.$base-font-size;
+  padding: 0.5rem 0.5rem;
+  resize: vertical;
+  width: 100%;
+
+  &::placeholder {
+    color: #ccc;
+  }
+}

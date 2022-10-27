@@ -1,0 +1,9 @@
+@use '../../assets/styles/media_queries' as mediaQ;
+
+.container {
+  padding: 6rem 2rem 2rem;
+
+  @include mediaQ.pc-and-up {
+    padding: 6rem;
+  }
+}

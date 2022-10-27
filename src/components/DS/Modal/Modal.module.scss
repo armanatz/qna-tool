@@ -1,0 +1,63 @@
+@use '../../../assets/styles/variables' as vars;
+
+.portal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 6em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.25;
+  z-index: 1000;
+}
+
+.main {
+  position: fixed;
+  background-color: white;
+  padding: 1rem;
+  z-index: 1000;
+  border-radius: vars.$border-radius;
+  width: 30%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.content {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 996px) {
+  .main {
+    width: 70%;
+  }
+}

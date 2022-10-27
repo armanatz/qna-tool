@@ -1,0 +1,33 @@
+@use './variables' as vars;
+@use './reset';
+
+@use 'sass:color';
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: vars.$page-bg-color;
+  color: vars.$text-color;
+  font-family: vars.$font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$primary-color;
+
+  &:hover {
+    color: color.scale(
+      vars.$primary-color,
+      $blackness: vars.$darken-value
+    );
+  }
+}

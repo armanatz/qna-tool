@@ -1,0 +1,27 @@
+@use '../../../assets/styles/variables' as vars;
+
+.form-control {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  .error {
+    color: vars.$danger-color;
+    margin-top: 0.5em;
+  }
+
+  & > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &.inline {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+
+    & > label {
+      margin-bottom: 0;
+    }
+  }
+}

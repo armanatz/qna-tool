@@ -1,0 +1,41 @@
+@use '../../../assets/styles/media_queries' as mediaQ;
+
+.container {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  min-height: 4.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  @include mediaQ.tablet-portrait-and-up {
+    justify-content: flex-start;
+    padding: 0 2rem;
+  }
+
+  @include mediaQ.pc-and-up {
+    padding: 0 6rem;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+
+  @include mediaQ.tablet-portrait-and-up {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

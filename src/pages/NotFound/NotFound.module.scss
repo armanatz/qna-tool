@@ -1,0 +1,26 @@
+@use 'sass:color';
+
+@use '../../assets/styles/variables' as vars;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.travolta {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,49 @@
+@use '../../../assets/styles/variables' as vars;
+
+.checkbox {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  input[type="checkbox"] {
+    appearance: none;
+    border: 1px solid vars.$border-color;
+    border-radius: vars.$border-radius;
+    cursor: pointer;
+    height: 1.25em;
+    position: relative;
+    transition: background-color 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+    width: 1.25em;
+
+    &::before {
+      border-color: #ffffff;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      content: '';
+      display: block;
+      height: 12px;
+      left: 5px;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transform: rotate(45deg);
+      width: 6px;
+    }
+
+    &:checked {
+      background-color: vars.$primary-color;
+      border-color: vars.$primary-color;
+      color: #ffffff;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    padding-left: 0.25rem;
+    user-select: none;
+  }
+}
