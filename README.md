@@ -1,28 +1,18 @@
-# ⚡ [Reactivite](https://github.com/armanatz/Reactivite) ⚡
+# Simple question and answer tool
 
-A minimal starter for React with TypeScript support with out of the box formatting and linting. Utilizes the blazing fast Vite build tool.
+Bootstrapped with my personal [Reactivite](https://github.com/armanatz/Reactivite) template
 
 ## Features
 
-- [React](https://reactjs.org) with [TypeScript](https://www.typescriptlang.org) using the [Vite](https://vitejs.dev) build tool.
-- Supports [Sass](https://sass-lang.com/) with [automatic type declaration file creation](https://github.com/activeguild/vite-plugin-sass-dts) when using SCSS Modules.
-- Utilizes [PostCSS](https://postcss.org/) with the [Autoprefixer](https://github.com/postcss/autoprefixer) plugin to optimize CSS and SCSS code.
-- Supports TypeScript [absolute imports](https://github.com/aleclarson/vite-tsconfig-paths).
-- Uses [ESLint](https://eslint.org) (with ESLint AirBnB Config), [stylelint](https://stylelint.io) and [Prettier](https://prettier.io) for code linting and formatting.
-- Runs pre-commit command using [Husky](https://github.com/typicode/husky) to run [lint-staged](https://github.com/okonet/lint-staged).
-- Unit and integration testing using [Vitest](https://vitest.dev/) and [Testing Library](https://testing-library.com/).
-- Comes with a light VSCode setting file to enable formatting on save for JSON, JavaScript, TypeScript, TypeScript React, and Markdown files.
-- Recommends useful extensions to install when using VSCode as your editor.
+- Add questions
+- Edit questions
+- Sort questions alphabetically
+- Delete questions (individual or all)
+- Click to reveal answer to question
 
 ## Getting Started
 
-Either use this repo as a [GitHub template](https://github.com/armanatz/Reactivite) or use [degit](https://github.com/Rich-Harris/degit) to make a clean copy of this repo:
-
-```
-npx degit armanatz/Reactivite#master my-app
-```
-
-After that, navigate to your project folder and install dependencies:
+Clone this repo and navigate to the project folder to install dependencies:
 
 ```
 // If using NPM as your package manager
@@ -42,7 +32,7 @@ npm run dev
 yarn dev
 ```
 
-To build your application, run:
+To build the application, run:
 
 ```
 // If using NPM as your package manager
